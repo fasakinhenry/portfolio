@@ -14,7 +14,6 @@ const Landing = () => {
     <>
       <Header />
       <PageSpace>
-        {/* Use padding-top instead of margin */}
         <Hero />
         <Skills />
         <Experience />
