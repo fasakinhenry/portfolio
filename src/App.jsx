@@ -5,13 +5,14 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import { Landing, NotFound } from './pages';
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/" element={<Landing />} />
-        <Route path="/*" element={<Signup />} />
+        <Route path="/*" element={<NotFound />} />
         </>
     )
   )
