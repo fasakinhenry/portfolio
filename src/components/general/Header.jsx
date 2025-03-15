@@ -35,7 +35,7 @@ const Header = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-gray-600"
+          className="z-40 md:hidden text-gray-600"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
