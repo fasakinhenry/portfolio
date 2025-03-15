@@ -7,14 +7,14 @@ import {
   Skills,
   Socials,
 } from "../components";
-
-import { PageSpace } from "../outlets/";
+import { PageSpace } from "../outlets";
 
 const Landing = () => {
   return (
     <>
       <Header />
       <PageSpace>
+        {/* Use padding-top instead of margin */}
         <Hero />
         <Skills />
         <Experience />

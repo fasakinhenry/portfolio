@@ -1,6 +1,6 @@
 const pageSpace = ({children}) => {
   return (
-      <div className="mt-20">
+      <div className="py-20">
           {children}
       </div>
   )
