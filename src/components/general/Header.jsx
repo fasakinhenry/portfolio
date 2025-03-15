@@ -21,7 +21,7 @@ const Header = () => {
               <li key={link}>
                 <Link
                   to={`#${link}`}
-                  className="capitalize text-white hover:underline"
+                  className="capitalize text-gray-600 hover:text-black"
                 >
                   {link}
                 </Link>
