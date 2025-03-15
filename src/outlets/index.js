@@ -1,5 +1,5 @@
-import pageSpace from "./pageSpace";
+import PageSpace from "./pageSpace";
 
 export {
-    pageSpace
+    PageSpace
 }

@@ -1,17 +1,29 @@
-import { Experience, Footer, Header, Hero, Projects, Skills, Socials } from "../components"
+import {
+  Experience,
+  Footer,
+  Header,
+  Hero,
+  Projects,
+  Skills,
+  Socials,
+} from "../components";
+
+import { PageSpace } from "../outlets/";
 
 const Landing = () => {
   return (
-      <>
-          <Header />
-          <Hero />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Socials />
-          <Footer />
-      </>
-  )
-}
+    <>
+      <Header />
+      <PageSpace>
+        <Hero />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Socials />
+        <Footer />
+      </PageSpace>
+    </>
+  );
+};
 
-export default Landing
+export default Landing;
