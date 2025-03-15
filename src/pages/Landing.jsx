@@ -1,4 +1,4 @@
-import { Experience, Footer, Header, Hero, Projects, Skills } from "../components"
+import { Experience, Footer, Header, Hero, Projects, Skills, Socials } from "../components"
 
 const Landing = () => {
   return (
@@ -8,6 +8,7 @@ const Landing = () => {
           <Skills />
           <Experience />
           <Projects />
+          <Socials />
           <Footer />
       </>
   )
