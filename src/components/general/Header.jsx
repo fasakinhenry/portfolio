@@ -11,9 +11,9 @@ const Header = () => {
   ];
   return (
     // Your header content here
-    <div className="bg-blue-500">
+    <div className="fixed w-full transparent backdrop-blur-md border-b border-gray-200">
       <div className="container mx-auto py-4 flex items-center justify-between">
-        <h2>Fasakin Henry</h2>
+        <h2 className="text-2xl font-bold">Fasakin Henry</h2>
         {/* Navigation links */}
         <nav>
           <ul className="flex space-x-4">
