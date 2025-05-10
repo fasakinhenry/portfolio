@@ -1,6 +1,7 @@
 'use client';
 
-import Navbar from './components/Navbar';
+import Navbar from '@/components/Navbar';
+import VerticalBoundaries from '@/components/VerticalBoundaries';
 import { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 
@@ -23,6 +24,7 @@ export default function Home() {
   return (
     <main className='min-h-screen bg-white text-black'>
       <Navbar />
+      <VerticalBoundaries />
       {/* Hero, About, Projects etc. will come here later */}
       <section className='h-screen flex items-center justify-center'>
         <h1 className='text-4xl font-bold'>Welcome to My Portfolio</h1>
