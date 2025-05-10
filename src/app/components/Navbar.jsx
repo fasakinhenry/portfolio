@@ -76,8 +76,8 @@ export default function Navbar() {
           href='/blog'
           className='bg-black text-white py-[14px] px-[20px] md:px-[22px] rounded-[14px] text-sm hover:opacity-90 duration-[300ms] transition-all hover:px-[28px] ml-2 md:ml-1'
         >
-          <span className='hidden md:flex'>My Blog</span>
-          <span className='md:hidden'>My Blog</span>
+          <span className='hidden font-jakarta md:flex'>My Blog</span>
+          <span className='md:hidden font-jakarta'>My Blog</span>
         </a>
       </motion.nav>
     </header>
