@@ -26,18 +26,31 @@ const word = {
   },
 };
 
+const h2Animation = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.8, // starts after h1
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+};
+
 const Hero = () => {
   return (
-    <section className='w-full max-w-[53rem] p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[8rem] items-start gap-[25px]'>
+    <section className='w-full max-w-[53rem] p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[10rem] items-start gap-[25px]'>
       <div>
         <img
           alt='Profile picture'
           width='100'
           height='100'
           decoding='async'
-          className='rounded-full'
-          style={{ color: 'transparent' }}
-          src='/profile.jpg'
+          className='rounded-full object-cover'
+          style={{ color: 'transparent', width: '100px', height: '100px' }}
+          src='/profile.jpeg'
         />
       </div>
 
@@ -59,10 +72,15 @@ const Hero = () => {
           ))}
         </motion.h1>
 
-        <h2 className='text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black'>
+        <motion.h2
+          className='text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black'
+          variants={h2Animation}
+          initial='hidden'
+          animate='visible'
+        >
           <span className='inline-block mr-[0.2em]'>Software</span>
           <span className='inline-block mr-[0.2em]'>Engineer</span>
-        </h2>
+        </motion.h2>
 
         <p className='text-[16px] font-normal tracking-[.01em] leading-[1.4em] text-[#5a5a5a] mt-[25px]'>
           Creating innovative solutions and captivating designs.
