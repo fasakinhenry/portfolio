@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { ChevronRight } from 'lucide-react'; // Import ChevronRight from lucide-react
 
 const projects = [
   {
@@ -75,20 +76,8 @@ const Projects = () => {
                   <span className='font-jakarta flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300'>
                     View Project
                   </span>
-                  <svg
-                    className='ml-2 w-5 h-5'
-                    fill='none'
-                    height='24'
-                    stroke='currentColor'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    viewBox='0 0 24 24'
-                    width='24'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path d='m9 18 6-6-6-6' />
-                  </svg>
+                  <ChevronRight className='ml-2 w-5 h-5' />{' '}
+                  {/* Use ChevronRight here */}
                 </button>
               </div>
             </Link>
@@ -102,21 +91,8 @@ const Projects = () => {
               <span className='font-jakarta flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300'>
                 View All
               </span>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                className='lucide lucide-chevron-right ml-2 w-5 h-5'
-                aria-hidden='true'
-              >
-                <path d='m9 18 6-6-6-6'></path>
-              </svg>
+              <ChevronRight className='ml-2 w-5 h-5' />{' '}
+              {/* Use ChevronRight here */}
             </button>
           </Link>
         </div>
