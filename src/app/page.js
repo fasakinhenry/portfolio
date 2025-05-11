@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import VerticalBoundaries from '@/components/VerticalBoundaries';
 import Hero from '@/components/sections/Hero';
 import ShowcaseScroller from '@/components/sections/ShowcaseScroller';
-import AboutSection from '@/components/sections/AboutSection';
+import About from '@/components/sections/About';
 import Projects from '@/components/sections/Projects';
 import WorkExperience from '@/components/sections/WorkExperience';
 
@@ -32,7 +32,7 @@ export default function Home() {
       <VerticalBoundaries />
       <Hero />
       <ShowcaseScroller />
-      <AboutSection />
+      <About />
       <Projects />
       <WorkExperience />
     </main>
