@@ -5,6 +5,7 @@ import Lenis from '@studio-freight/lenis';
 import Navbar from '@/components/Navbar';
 import VerticalBoundaries from '@/components/VerticalBoundaries';
 import Hero from '@/components/sections/Hero';
+import ShowcaseScroller from '@/components/sections/ShowcaseScroller';
 
 export default function Home() {
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function Home() {
       <Navbar />
       <VerticalBoundaries />
       <Hero />
-      {/* You can add About, Projects, etc. below this */}
+      <ShowcaseScroller />
     </main>
   );
 }
