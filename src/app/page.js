@@ -7,6 +7,7 @@ import VerticalBoundaries from '@/components/VerticalBoundaries';
 import Hero from '@/components/sections/Hero';
 import ShowcaseScroller from '@/components/sections/ShowcaseScroller';
 import AboutSection from '@/components/sections/AboutSection';
+import Projects from '@/components/sections/Projects';
 
 export default function Home() {
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function Home() {
       <Hero />
       <ShowcaseScroller />
       <AboutSection />
+      <Projects />
     </main>
   );
 }
