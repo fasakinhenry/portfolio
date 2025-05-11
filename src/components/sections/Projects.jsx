@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react'; // Import ChevronRight from lucide-react
+import { ChevronRight } from 'lucide-react';
 
 const projects = [
   {
@@ -76,8 +76,7 @@ const Projects = () => {
                   <span className='font-jakarta flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300'>
                     View Project
                   </span>
-                  <ChevronRight className='ml-2 w-5 h-5' />{' '}
-                  {/* Use ChevronRight here */}
+                  <ChevronRight className='ml-2 w-5 h-5' />
                 </button>
               </div>
             </Link>
@@ -91,8 +90,7 @@ const Projects = () => {
               <span className='font-jakarta flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300'>
                 View All
               </span>
-              <ChevronRight className='ml-2 w-5 h-5' />{' '}
-              {/* Use ChevronRight here */}
+              <ChevronRight className='ml-2 w-5 h-5' />
             </button>
           </Link>
         </div>
