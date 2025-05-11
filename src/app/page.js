@@ -8,6 +8,7 @@ import Hero from '@/components/sections/Hero';
 import ShowcaseScroller from '@/components/sections/ShowcaseScroller';
 import AboutSection from '@/components/sections/AboutSection';
 import Projects from '@/components/sections/Projects';
+import WorkExperience from '@/components/sections/WorkExperience';
 
 export default function Home() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function Home() {
       <ShowcaseScroller />
       <AboutSection />
       <Projects />
+      <WorkExperience />
     </main>
   );
 }
