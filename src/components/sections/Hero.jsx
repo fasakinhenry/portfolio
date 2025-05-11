@@ -90,8 +90,8 @@ const Hero = () => {
       </div>
 
       <div className='flex gap-4'>
-        <button className='bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all duration-[300ms] hover:px-[28px]'>
-          Hire Me!
+        <button className='font-jakarta bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all duration-[300ms] hover:px-[28px]'>
+          Hire Me
         </button>
         <div className='flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00]'>
           <div className='w-2 h-2 bg-[#178d00] rounded-full' />
