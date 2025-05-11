@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import VerticalBoundaries from '@/components/VerticalBoundaries';
 import Hero from '@/components/sections/Hero';
 import ShowcaseScroller from '@/components/sections/ShowcaseScroller';
+import AboutSection from '@/components/AboutSection';
 
 export default function Home() {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function Home() {
       <VerticalBoundaries />
       <Hero />
       <ShowcaseScroller />
+      <AboutSection />
     </main>
   );
 }
