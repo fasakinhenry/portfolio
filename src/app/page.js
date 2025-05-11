@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import VerticalBoundaries from '@/components/VerticalBoundaries';
 import Hero from '@/components/sections/Hero';
 import ShowcaseScroller from '@/components/sections/ShowcaseScroller';
-import AboutSection from '@/components/AboutSection';
+import AboutSection from '@/components/sections/AboutSection';
 
 export default function Home() {
   useEffect(() => {

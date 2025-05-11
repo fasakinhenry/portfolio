@@ -3,7 +3,7 @@ import Image from 'next/image';
 const AboutSection = () => {
   return (
     <section className='w-full max-w-3xl p-6 flex flex-col py-[100px] md:py-[158px] px-6 md:px-32 items-start gap-6 mx-auto'>
-      <h2 className='text-[25px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black'>
+      <h2 className='font-jakarta text-[25px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black'>
         About
       </h2>
       <div className='flex flex-col gap-6 text-[#5a5a5a] text-[16px] md:tracking-[.01em] md:leading-[1.4em]'>
