@@ -34,7 +34,7 @@ const ShowcaseScroller = () => {
         gradient={false}
         play={true}
         direction='left'
-        pauseOnHover={false} // explicitly false to avoid hover pause
+        pauseOnHover={false}
       >
         {[...items, ...items].map((item, index) => (
           <div
