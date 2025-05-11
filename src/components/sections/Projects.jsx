@@ -18,6 +18,20 @@ const projects = [
       'Enhanced digital payment solution with improved user experience and advanced virtual card management',
     image: '/ondepay.png',
   },
+  {
+    slug: 'runmecv',
+    title: 'RunMeCV AI',
+    description:
+      'AI-powered resume builder offering professional templates, real-time editing, and intelligent content suggestions to create standout CVs',
+    image: '/runmecv.png',
+  },
+  {
+    slug: 'sme-unwind',
+    title: 'SME Unwind 2024',
+    description:
+      'SME Unwind 2024 is a platform that connects small and medium-sized enterprises with investors and potential partners',
+    image: '/sme.png',
+  },
 ];
 
 const Projects = () => {
@@ -57,7 +71,7 @@ const Projects = () => {
                 {project.description}
               </p>
               <button className='mt-4 bg-[#f2f2f2] hover:bg-[#e5e5e5] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-black transition-all duration-500 group'>
-                <span className='flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300'>
+                <span className='font-jakarta flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300'>
                   View Project
                 </span>
                 <svg
@@ -78,6 +92,32 @@ const Projects = () => {
             </div>
           </Link>
         ))}
+      </div>
+
+      {/* Updated View All Button */}
+      <div className='col-span-2 w-full'>
+        <Link href='/projects'>
+          <button className='mt-4 mx-auto bg-[#000] hover:bg-[#121212] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-white text-start no-underline transition-all duration-500 group'>
+            <span className='font-jakarta flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300'>
+              View All
+            </span>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='24'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              className='lucide lucide-chevron-right ml-2 w-5 h-5'
+              aria-hidden='true'
+            >
+              <path d='m9 18 6-6-6-6'></path>
+            </svg>
+          </button>
+        </Link>
       </div>
     </section>
   );
