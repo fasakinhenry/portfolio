@@ -13,31 +13,35 @@ const ShowcaseScroller = () => {
   return (
     <div className='w-full overflow-hidden' style={{ padding: '8rem 0' }}>
       {/* Add an outer container with overflow hidden to prevent scrollbars */}
-      <div className='relative z-10' style={{ margin: '2rem 0', padding: '1.5rem 0' }}>
+      <div
+        className='relative z-10'
+        style={{ margin: '2rem 0', padding: '1.5rem 0' }}
+      >
         {/* Increase the margin/padding to give hover effects room to expand */}
         <Marquee
           speed={30}
           gradient={false}
           pauseOnHover
           play={true}
-          direction="left"
+          direction='left'
           delay={0}
         >
           {/* First set of items */}
           {items.map((item, index) => (
-            <div 
-              key={`first-${index}`} 
+            <div
+              key={`first-${index}`}
               className='mx-6'
-              style={{ 
+              style={{
                 perspective: '1000px',
-                transformStyle: 'preserve-3d'
+                transformStyle: 'preserve-3d',
               }}
             >
               <div
                 className='flex w-[400px] h-[280px] rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] bg-[#fafafa] relative hover:scale-[1.05]'
                 style={{
                   boxShadow: 'rgb(255, 255, 255) 0px 3px 0px 0px inset',
-                  transition: 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                  transition:
+                    'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                   willChange: 'transform',
                   transform: 'translateZ(0)',
                 }}
@@ -80,19 +84,20 @@ const ShowcaseScroller = () => {
 
           {/* Second set for seamless looping */}
           {items.map((item, index) => (
-            <div 
-              key={`second-${index}`} 
+            <div
+              key={`second-${index}`}
               className='mx-6'
-              style={{ 
+              style={{
                 perspective: '1000px',
-                transformStyle: 'preserve-3d'
+                transformStyle: 'preserve-3d',
               }}
             >
               <div
                 className='flex w-[400px] h-[280px] rounded-[20px] overflow-hidden border-[1.5px] border-[#f2f2f2] bg-[#fafafa] relative hover:scale-[1.05]'
                 style={{
                   boxShadow: 'rgb(255, 255, 255) 0px 3px 0px 0px inset',
-                  transition: 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                  transition:
+                    'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                   willChange: 'transform',
                   transform: 'translateZ(0)',
                 }}
