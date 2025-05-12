@@ -20,14 +20,14 @@ const Contact = () => {
                 placeholder="Full Name" 
                 required 
                 className="flex-1 bg-[#f2f2f2] border-[1px] border-[#0000001a] rounded-[14px] px-[24px] py-[14px] text-[16px] outline-none focus:ring-2 focus:ring-black transition-all" 
-                name="name" 
+                name="name"
               />
               <input 
                 type="email" 
                 placeholder="Email Address" 
                 required 
                 className="flex-1 bg-[#f2f2f2] border-[1px] border-[#0000001a] rounded-[14px] px-[24px] py-[14px] text-[16px] outline-none focus:ring-2 focus:ring-black transition-all" 
-                name="email" 
+                name="email"
               />
             </div>
             <textarea 
@@ -46,7 +46,7 @@ const Contact = () => {
                 decoding="async" 
                 src="/doodle.png" 
                 fill 
-                className="absolute object-cover top-0 left-0 opacity-10" 
+                className="absolute object-cover top-0 left-0 opacity-10"
               />
               Send Message
             </button>

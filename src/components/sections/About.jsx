@@ -13,54 +13,51 @@ const About = () => {
           industries.
         </p>
         <p>
-          I'm Robinson Honour, a 19-year-old Nigerian software developer, with
+          I'm Fasakin Henry, a Nigerian software developer, with
           7.5+ years of experience in web development, app development,
           robotics, cloud computing, and game development. I specialize in
           building robust applications, cloud platforms, and cutting-edge
           robotics solutions.
         </p>
         <p>
-          A self-taught programmer, ranked among the top programmers in Port
-          Harcourt, Nigeria, I am an active tech content creator, speaker, and
+          A self-taught programmer, ranked among the top programmers in
+          Lagos, Nigeria, I am an active tech content creator, speaker, and
           mentor passionate about empowering others in tech.
         </p>
-
-        <div className='relative w-full h-[250px] mt-8 group'>
-          {/* Left Image */}
-          <div className='absolute top-0 left-[20%] bg-white px-2 pt-2 -rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:-translate-x-4 group-hover:scale-105'>
-            <div className='w-[200px] h-[200px]'>
-              <Image
-                src='/about1.png'
-                alt='About image 1'
-                width={200}
-                height={200}
-                className='object-cover rounded-lg w-full h-full'
-              />
-            </div>
-            <span className='text-xs flex justify-center py-1 pb-3 italic text-black text-center'>
-              @ikwerre-dev
-            </span>
-          </div>
-
-          {/* Right Image */}
-          <div className='absolute top-10 right-[20%] bg-white px-2 pt-2 rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:translate-x-4 group-hover:scale-105'>
-            <div className='w-[200px] h-[200px]'>
-              <Image
-                src='/about2.png'
-                alt='About image 2'
-                width={200}
-                height={200}
-                className='object-cover rounded-lg w-full h-full'
-              />
-            </div>
-            <span className='text-xs flex justify-center py-1 pb-3 italic text-black text-center'>
-              @codewithhonour
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+         <div className='relative w-full h-[250px] mt-8 group'>
+           <div className='absolute top-0 left-[20%] bg-white px-2 pt-2 -rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:-translate-x-4 group-hover:scale-105'>
+             <div className='w-[200px] h-[200px]'>
+               <Image
+                 src='/about1.png'
+                 alt='About image 1'
+                 width={200}
+                 height={200}
+                 className='object-cover rounded-lg w-full h-full'
+               />
+             </div>
+             <span className='text-xs flex justify-center py-1 pb-3 italic text-black text-center'>
+               @techwithhenty
+             </span>
+           </div>
+            
+           <div className='absolute top-10 right-[20%] bg-white px-2 pt-2 rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:translate-x-4 group-hover:scale-105'>
+             <div className='w-[200px] h-[200px]'>
+               <Image
+                 src='/about2.png'
+                 alt='About image 2'
+                 width={200}
+                 height={200}
+                 className='object-cover rounded-lg w-full h-full'
+               />
+             </div>
+             <span className='text-xs flex justify-center py-1 pb-3 italic text-black text-center'>
+               @techwithhenty
+             </span>
+           </div>
+         </div>
+       </div>
+     </section>
+   );
 };
 
 export default About;
