@@ -12,24 +12,25 @@ const navLinks = [
   },
   {
     label: 'Twitter',
-    href: 'https://x.com/@honour_can_code',
+    href: 'https://x.com/henqsoft',
     external: true,
     icon: (
       <svg
         stroke='currentColor'
         fill='currentColor'
-        viewBox='0 0 16 16'
-        height='17'
-        width='17'
+        strokeWidth='0'
+        viewBox='0 0 512 512'
+        height='20'
+        width='20'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <path d='M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z'></path>
+        <path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'></path>
       </svg>
     ),
   },
   {
     label: 'Github',
-    href: '/github',
+    href: 'https://github.com/fasakinhenry',
     icon: <Github size={20} />,
   },
   {
