@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Contact = () => {
   return (
     <section className="w-full flex justify-center items-center py-10">
-      <div className="w-full max-w-[53rem] p-6 flex flex-col py-[58px] px-[1.5rem] md:px-[8rem] items-center gap-[25px]">
+      <div className="w-full max-w-[53rem] p-6 flex flex-col py-[20px] px-[1.5rem] md:px-[8rem] items-center gap-[25px]">
         <div id="contact-form" className="w-full max-w-[53rem] flex flex-col items-start">
           <h2 className="text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black mb-[16px]">
             Get in touch
@@ -38,7 +38,7 @@ const Contact = () => {
             ></textarea>
             <button 
               type="submit" 
-              className="bg-black relative text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70"
+              className="bg-black relative text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70 mt-2"
             >
               <Image 
                 alt="Doodle" 
