@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className='w-full max-w-3xl p-6 flex flex-col py-[100px] md:py-[158px] px-6 md:px-32 items-start gap-6 mx-auto'>
+    <section className='w-full max-w-3xl p-6 flex flex-col py-6 md:py-8 px-6 md:px-32 items-start gap-6 mx-auto'>
       <h2 className='font-jakarta text-[25px] md:text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black'>
         About
       </h2>
