@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
+import TechMarquee from './TechMarquee';
 
 const projects = [
   {
@@ -37,15 +38,19 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className='w-full flex justify-center py-[58px] px-[1.5rem]'>
-      <div className='w-full max-w-[53rem] flex flex-col gap-[25px]'>
-        <div className='flex items-center gap-2 mb-8'>
+    <section className='w-full flex flex-col items-center justify-center py-[58px] px-[1.5rem]'>
+      <div className='w-full max-w-[53rem]'>
+        <TechMarquee />
+      </div>
+      
+      <div className='w-full max-w-[53rem] flex flex-col items-center gap-[25px]'>
+        <div className='flex items-center justify-center gap-2 mb-8 w-full'>
           <h2 className='text-[32px] text-center font-bold tracking-[-.03em] leading-[110%] text-black'>
             Here's What I've Been Up To.
           </h2>
         </div>
 
-        <div className='flex flex-col md:grid grid-cols-1 md:grid-cols-2 gap-8 w-full'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full'>
           {projects.map((project) => (
             <Link
               key={project.slug}
@@ -84,9 +89,9 @@ const Projects = () => {
         </div>
 
         {/* Updated View All Button */}
-        <div className='col-span-2 w-full'>
-          <Link href='/projects'>
-            <button className='mt-4 mx-auto bg-[#000] hover:bg-[#121212] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-white text-start no-underline transition-all duration-500 group'>
+        <div className='w-full flex justify-center'>
+          <Link href='/projects' className='w-auto'>
+            <button className='mt-4 bg-[#000] hover:bg-[#121212] flex items-center rounded-[14px] px-[24px] py-[14px] text-[16px] font-normal text-white text-start no-underline transition-all duration-500 group'>
               <span className='font-jakarta flex items-center group-hover:pr-2 font-medium text-[16px] transition-all duration-300'>
                 View All
               </span>
