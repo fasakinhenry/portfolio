@@ -10,7 +10,7 @@ const Footer = () => {
         </p>
         <div className="flex gap-6 py-1 cursor-pointer">
           <Link
-            href="https://x.com/@techwithhenty"
+            href="https://x.com/henqsoft"
             className="text-[#5a5a5a] cursor-pointer hover:text-black transition-all"
           >
             <svg
@@ -27,21 +27,21 @@ const Footer = () => {
           </Link>
 
           <Link
-            href="https://www.instagram.com/techwithhenty"
+            href="https://www.instagram.com/henqsoft"
             className="text-[#5a5a5a] cursor-pointer hover:text-black transition-all"
           >
             <Instagram size={20} />
           </Link>
 
           <Link
-            href="https://github.com/techwithhenty"
+            href="https://github.com/fasakinhenry"
             className="text-[#5a5a5a] cursor-pointer hover:text-black transition-all"
           >
             <Github size={20} />
           </Link>
 
           <Link
-            href="mailto:techwithhenty@gmail.com"
+            href="mailto:fasakinhenry@gmail.com"
             className="text-[#5a5a5a] cursor-pointer hover:text-black transition-all"
           >
             <Mail size={20} />
