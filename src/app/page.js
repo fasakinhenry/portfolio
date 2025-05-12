@@ -11,6 +11,7 @@ import Projects from '@/components/sections/Projects';
 import WorkExperience from '@/components/sections/WorkExperience';
 import Skills from '@/components/sections/Skills';
 import Contact from '@/components/sections/Contact';
+import Footer from '@/components/sections/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -39,6 +40,7 @@ export default function Home() {
       <WorkExperience />
       <Skills />
       <Contact />
+      <Footer />
     </main>
   );
 }
