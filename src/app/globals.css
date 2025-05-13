@@ -9,15 +9,17 @@
 
 body {
   font-family: var(--font-mono);
+  letter-spacing: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-jakarta);
 }
 
-/* Add classes for gont-mono and font-jakarta */
+/* Add classes for font-mono and font-jakarta */
 .font-mono {
   font-family: var(--font-mono);
+  letter-spacing: normal;
 }
 
 .font-jakarta {
