@@ -1,7 +1,7 @@
 'use client';
 
 import Marquee from 'react-fast-marquee';
-import { Linkedin, Twitter, Facebook, AtSign } from 'lucide-react';
+import { SiLinkedin, SiFacebook, SiThreads, SiX } from 'react-icons/si';
 import { useState } from 'react';
 
 const testimonials = [
@@ -18,8 +18,8 @@ const testimonials = [
     name: 'Michael Chen',
     username: '@mikechendev',
     image: '/testimonials/michael.jpg',
-    social: 'twitter',
-    link: 'https://twitter.com/mikechendev',
+    social: 'x',
+    link: 'https://x.com/mikechendev',
   },
   {
     text: "Henry's work on our healthcare platform was exceptional. He understood the complex requirements and delivered a solution that exceeded our expectations.",
@@ -50,29 +50,30 @@ const testimonials = [
     name: 'David Kim',
     username: '@davidkim',
     image: '/testimonials/david.jpg',
-    social: 'twitter',
-    link: 'https://twitter.com/davidkim',
+    social: 'x',
+    link: 'https://x.com/davidkim',
   },
 ];
 
 const getSocialIcon = (social) => {
+  const iconSize = 16;
+
   switch (social) {
     case 'linkedin':
-      return <Linkedin size={16} className='text-[#0077b5]' />;
-    case 'twitter':
-      return <Twitter size={16} className='text-[#1DA1F2]' />;
+      return <SiLinkedin size={iconSize} className='text-[#0077b5]' />;
+    case 'x':
+      return <SiX size={iconSize} className='text-black' />;
     case 'facebook':
-      return <Facebook size={16} className='text-[#4267B2]' />;
+      return <SiFacebook size={iconSize} className='text-[#4267B2]' />;
     case 'threads':
     default:
-      return <AtSign size={16} className='text-[#101010]' />;
+      return <SiThreads size={iconSize} className='text-[#000000]' />;
   }
 };
 
 const Testimonials = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  // Card style definitions like in ShowcaseScroller
   const cardStyles = {
     boxShadow: 'rgb(255, 255, 255) 0px 3px 0px 0px inset',
     transition: 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
@@ -90,7 +91,7 @@ const Testimonials = () => {
         <h2 className='text-4xl font-bold tracking-tight text-gray-900 mb-4'>
           What People Are Saying
         </h2>
-        <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
+        <p className='text-gray-600 max-w-2xl mx-auto'>
           Don't just take my word for it - here's what clients and collaborators
           have to say.
         </p>
@@ -124,27 +125,24 @@ const Testimonials = () => {
                   className='p-6 flex flex-col w-full h-full rounded-[10px]'
                   style={innerShadow}
                 >
-                  {/* Social icon at top left */}
+                  {/* Plain icon on top left */}
                   <a
                     href={testimonial.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='absolute top-4 left-4 w-8 h-8 flex items-center justify-center rounded-full bg-white shadow-sm hover:shadow-md transition-shadow'
+                    className='absolute top-4 left-4 transition-transform hover:scale-110'
                     onClick={(e) => e.stopPropagation()}
                   >
                     {getSocialIcon(testimonial.social)}
                   </a>
 
-                  {/* Quote content */}
+                  {/* Content */}
                   <div className='flex flex-col h-full'>
-                    {/* Testimonial text */}
-                    <p className='text-gray-700 flex-grow mb-4 line-clamp-5 mt-6'>
+                    <p className='text-sm text-gray-700 flex-grow mb-4 mt-6 line-clamp-5'>
                       "{testimonial.text}"
                     </p>
 
-                    {/* Profile container */}
                     <div className='flex items-center mt-auto'>
-                      {/* Profile image */}
                       <div className='w-12 h-12 rounded-full overflow-hidden border border-gray-100 mr-4'>
                         <img
                           src={testimonial.image}
@@ -152,10 +150,8 @@ const Testimonials = () => {
                           className='w-full h-full object-cover'
                         />
                       </div>
-
-                      {/* Name and username */}
                       <div className='grid'>
-                        <span className='font-semibold text-gray-900'>
+                        <span className='font-semibold text-gray-900 font-jakarta'>
                           {testimonial.name}
                         </span>
                         <span className='text-sm text-gray-500'>
