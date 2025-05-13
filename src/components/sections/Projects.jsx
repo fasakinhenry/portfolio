@@ -102,7 +102,7 @@ const Projects = ({ showAll = false }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   // For homepage, show only first 6 projects
-  const displayedProjects = showAll ? projects : projects.slice(0, 6);
+  const displayedProjects = showAll ? projects : projects.slice(0, 4);
 
   const handleModalOpen = (project) => {
     setSelectedProject(project);
@@ -188,7 +188,7 @@ const Projects = ({ showAll = false }) => {
         {!showAll && (
           <div className='w-full flex justify-center'>
             <Link href='/projects'>
-              <button className='mt-4 bg-black hover:bg-[#121212] flex items-center rounded-[14px] px-6 py-3 text-white text-sm font-medium transition-all duration-300 group'>
+              <button className='mt-4 bg-black hover:bg-[#121212] flex items-center rounded-[14px] px-6 py-3 text-white text-sm font-medium transition-all duration-300 group cursor-pointer'>
                 <span className='flex items-center group-hover:pr-2 transition-all duration-300'>
                   View All
                 </span>
