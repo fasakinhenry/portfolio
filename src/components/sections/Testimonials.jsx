@@ -100,7 +100,6 @@ const Testimonials = () => {
       <div className='w-full overflow-hidden transform-none'>
         <Marquee
           className='gap-6 py-[1rem]'
-          speed={hoveredIndex !== null ? 0 : 30}
           gradient={false}
           play={true}
           direction='left'
@@ -109,7 +108,7 @@ const Testimonials = () => {
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={index}
-              className='mx-6 bg-grey-50'
+              className='mx-6 grey-50'
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               style={{
@@ -118,11 +117,11 @@ const Testimonials = () => {
               }}
             >
               <div
-                className='flex w-[400px] h-[280px] rounded-[20px] overflow-hidden border border-[#f2f2f2] bg-[#fafafa] relative hover:scale-[1.02]'
+                className='flex flex-col w-[350px] h-[260px] rounded-[20px] overflow-hidden border border-[#f2f2f2] bg-[#fafafa] relative hover:scale-[1.02]'
                 style={cardStyles}
               >
                 <div
-                  className='p-6 flex flex-col w-full h-full rounded-[10px]'
+                  className='flex flex-col justify-between h-full relative p-6'
                   style={innerShadow}
                 >
                   {/* Social Icon */}
@@ -130,21 +129,21 @@ const Testimonials = () => {
                     href={testimonial.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='absolute top-4 left-4 transition-transform hover:scale-105'
+                    className='absolute top-6 left-6 transition-transform hover:scale-105'
                     onClick={(e) => e.stopPropagation()}
                   >
                     {getSocialIcon(testimonial.social)}
                   </a>
 
-                  {/* Vertically centered content */}
-                  <div className='flex flex-col justify-center flex-grow'>
+                  {/* Testimonial Text */}
+                  <div className='flex flex-col justify-center flex-grow pt-10'>
                     <p className='text-sm text-gray-700 line-clamp-5'>
-                      "{testimonial.text}"
+                      {testimonial.text}
                     </p>
                   </div>
 
                   {/* Avatar and Name */}
-                  <div className='flex items-center'>
+                  <div className='flex items-center mt-4'>
                     <div className='w-12 h-12 rounded-full overflow-hidden border border-gray-100 mr-4'>
                       <img
                         src={testimonial.image}
