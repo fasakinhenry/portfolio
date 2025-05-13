@@ -109,7 +109,7 @@ const Testimonials = () => {
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={index}
-              className='mx-6'
+              className='mx-6 bg-grey-50'
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               style={{
@@ -118,28 +118,33 @@ const Testimonials = () => {
               }}
             >
               <div
-                className='flex flex-col w-[320px] h-[320px] rounded-[20px] overflow-hidden border border-[#f2f2f2] bg-[#fafafa] relative hover:scale-[1.02]'
-                style={{ ...cardStyles, ...innerShadow }}
+                className='flex w-[400px] h-[280px] rounded-[20px] overflow-hidden border border-[#f2f2f2] bg-[#fafafa] relative hover:scale-[1.02]'
+                style={cardStyles}
               >
-                <div className='flex flex-col justify-between h-full p-6'>
+                <div
+                  className='p-6 flex flex-col w-full h-full rounded-[10px]'
+                  style={innerShadow}
+                >
                   {/* Social Icon */}
                   <a
                     href={testimonial.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='mb-2'
+                    className='absolute top-4 left-4 transition-transform hover:scale-105'
                     onClick={(e) => e.stopPropagation()}
                   >
                     {getSocialIcon(testimonial.social)}
                   </a>
 
-                  {/* Testimonial Text */}
-                  <p className='text-sm text-gray-700 line-clamp-5 flex-grow'>
-                    "{testimonial.text}"
-                  </p>
+                  {/* Vertically centered content */}
+                  <div className='flex flex-col justify-center flex-grow'>
+                    <p className='text-sm text-gray-700 line-clamp-5'>
+                      "{testimonial.text}"
+                    </p>
+                  </div>
 
                   {/* Avatar and Name */}
-                  <div className='flex items-center mt-4'>
+                  <div className='flex items-center'>
                     <div className='w-12 h-12 rounded-full overflow-hidden border border-gray-100 mr-4'>
                       <img
                         src={testimonial.image}
