@@ -56,7 +56,7 @@ const testimonials = [
 ];
 
 const getSocialIcon = (social) => {
-  const iconSize = 16;
+  const iconSize = 24;
 
   switch (social) {
     case 'linkedin':
@@ -118,46 +118,47 @@ const Testimonials = () => {
               }}
             >
               <div
-                className='flex w-[400px] h-[280px] rounded-[20px] overflow-hidden border border-[#f2f2f2] bg-[#fafafa] relative hover:scale-[1.05]'
+                className='flex w-[400px] h-[280px] rounded-[20px] overflow-hidden border border-[#f2f2f2] bg-[#fafafa] relative hover:scale-[1.02]'
                 style={cardStyles}
               >
                 <div
                   className='p-6 flex flex-col w-full h-full rounded-[10px]'
                   style={innerShadow}
                 >
-                  {/* Plain icon on top left */}
+                  {/* Social Icon */}
                   <a
                     href={testimonial.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='absolute top-4 left-4 transition-transform hover:scale-110'
+                    className='absolute top-4 left-4 transition-transform hover:scale-105'
                     onClick={(e) => e.stopPropagation()}
                   >
                     {getSocialIcon(testimonial.social)}
                   </a>
 
-                  {/* Content */}
-                  <div className='flex flex-col h-full'>
-                    <p className='text-sm text-gray-700 flex-grow mb-4 mt-6 line-clamp-5'>
+                  {/* Vertically centered content */}
+                  <div className='flex flex-col justify-center flex-grow'>
+                    <p className='text-sm text-gray-700 line-clamp-5'>
                       "{testimonial.text}"
                     </p>
+                  </div>
 
-                    <div className='flex items-center mt-auto'>
-                      <div className='w-12 h-12 rounded-full overflow-hidden border border-gray-100 mr-4'>
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className='w-full h-full object-cover'
-                        />
-                      </div>
-                      <div className='grid'>
-                        <span className='font-semibold text-gray-900 font-jakarta'>
-                          {testimonial.name}
-                        </span>
-                        <span className='text-sm text-gray-500'>
-                          {testimonial.username}
-                        </span>
-                      </div>
+                  {/* Avatar and Name */}
+                  <div className='flex items-center'>
+                    <div className='w-12 h-12 rounded-full overflow-hidden border border-gray-100 mr-4'>
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className='w-full h-full object-cover'
+                      />
+                    </div>
+                    <div className='grid'>
+                      <span className='font-semibold text-gray-900 font-jakarta'>
+                        {testimonial.name}
+                      </span>
+                      <span className='text-sm text-gray-500'>
+                        {testimonial.username}
+                      </span>
                     </div>
                   </div>
                 </div>
