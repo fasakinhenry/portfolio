@@ -10,6 +10,7 @@ import About from '@/components/sections/About';
 import Projects from '@/components/sections/Projects';
 import WorkExperience from '@/components/sections/WorkExperience';
 import Skills from '@/components/sections/Skills';
+import Testimonials from '@/components/sections/Testimonials';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
 
@@ -39,6 +40,7 @@ export default function Home() {
       <Projects />
       <WorkExperience />
       <Skills />
+      <Testimonials />
       <Contact />
       <Footer />
     </main>
