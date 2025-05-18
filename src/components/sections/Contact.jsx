@@ -7,7 +7,7 @@ import { motion, useInView } from 'framer-motion';
 const Contact = () => {
   const messageRef = useRef(null);
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
+  const isInView = useInView(sectionRef, { once: false, margin: '-100px' });
 
   useEffect(() => {
     // Check if there's a URL parameter for prefilling the message
@@ -33,25 +33,28 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className='w-full flex justify-center items-center py-10' ref={sectionRef}>
+    <section
+      className='w-full flex justify-center items-center py-10'
+      ref={sectionRef}
+    >
       <div className='w-full max-w-[53rem] p-6 flex flex-col py-[20px] px-[1.5rem] md:px-[8rem] items-center gap-[25px]'>
         <div
           id='contact-form'
           className='w-full max-w-[53rem] flex flex-col items-start'
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             className='text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black mb-4'
           >
             Get in touch
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.05 }}
+            transition={{ duration: 0.3, ease: 'easeOut', delay: 0.05 }}
             className='text-sm font-normal text-[#5a5a5a] mb-8 max-w-[600px]'
           >
             I'm always interested in exploring new opportunities, collaborating,
@@ -64,8 +67,10 @@ const Contact = () => {
             <div className='grid md:flex gap-4 w-full'>
               <motion.input
                 initial={{ opacity: 0, y: 15 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }
+                }
+                transition={{ duration: 0.3, ease: 'easeOut', delay: 0.1 }}
                 type='text'
                 placeholder='Full Name'
                 required
@@ -74,8 +79,10 @@ const Contact = () => {
               />
               <motion.input
                 initial={{ opacity: 0, y: 15 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                transition={{ duration: 0.3, ease: "easeOut", delay: 0.15 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }
+                }
+                transition={{ duration: 0.3, ease: 'easeOut', delay: 0.15 }}
                 type='email'
                 placeholder='Email Address'
                 required
@@ -86,7 +93,7 @@ const Contact = () => {
             <motion.textarea
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-              transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}
+              transition={{ duration: 0.3, ease: 'easeOut', delay: 0.2 }}
               ref={messageRef}
               name='message'
               placeholder='Write your Message'
@@ -96,18 +103,10 @@ const Contact = () => {
             <motion.button
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-              transition={{ duration: 0.3, ease: "easeOut", delay: 0.25 }}
+              transition={{ duration: 0.3, ease: 'easeOut', delay: 0.25 }}
               type='submit'
-              className='font-jakarta bg-black relative text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70 mt-2'
+              className='font-jakarta bg-black relative text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:scale-[1.02] duration-[300ms] transition-all w-full disabled:opacity-70 mt-2 cursor-pointer'
             >
-              <Image
-                alt='Doodle'
-                loading='lazy'
-                decoding='async'
-                src='/doodle.png'
-                fill
-                className='absolute object-cover top-0 left-0 opacity-10'
-              />
               Send Message
             </motion.button>
           </div>

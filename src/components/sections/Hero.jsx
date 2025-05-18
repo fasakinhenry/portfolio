@@ -76,7 +76,7 @@ const Hero = () => {
 
       <div className='text-start'>
         <motion.h1
-          className='text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black mb-2'
+          className='text-[26px] md:text-[42px] font-bold tracking-[-.05em] leading-[110%] text-black mb-2'
           variants={container}
           initial='hidden'
           animate='visible'
