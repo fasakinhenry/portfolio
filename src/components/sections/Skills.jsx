@@ -26,17 +26,8 @@ const Skills = () => {
   ];
 
   return (
-    <section className="w-full flex justify-center items-center py-10">
+    <section className="w-full flex justify-center items-center">
       <div className="w-full max-w-[53rem] flex flex-col items-center relative bg-black px-[1rem] md:px-[5rem] py-[5rem] rounded-none md:rounded-xl">
-        <Image
-          alt="Doodle"
-          loading="lazy"
-          decoding="async"
-          src="/doodle.png"
-          layout="fill"
-          objectFit="cover"
-          className="absolute top-0 left-0 opacity-10"
-        />
         <h2 className="text-[32px] font-bold tracking-[-.03em] leading-[110%] text-white text-center w-full mb-[16px]">
           How can I help?
         </h2>
@@ -44,7 +35,7 @@ const Skills = () => {
           Let's turn your vision into something amazing.
         </p>
         <div className="flex gap-6 w-full">
-          <Marquee gradient={false} speed={50} pauseOnHover={true}>
+          <Marquee gradient={false} speed={50} pauseOnHover={false}>
             {skills.map((skill, index) => (
               <div
                 key={index}

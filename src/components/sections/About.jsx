@@ -85,15 +85,14 @@ const About = () => {
 
         <motion.p variants={fadeIn}>
           I'm Fasakin Henry, a Nigerian full-stack developer and tech
-          entrepreneur with over 5 years of experience in web and mobile
-          development, cloud platforms, robotics, and developer tools. I’m known
+          entrepreneur with 5+ years of experience in web and mobile
+          development, cloud platforms, developer tools and even product design. I’m known
           for delivering highly performant, production-ready applications and
           creating robust systems that power real-world solutions.
         </motion.p>
 
         <motion.p variants={fadeIn}>
-          As a self-taught programmer recognized among the top developers in
-          Lagos, I’m passionate about leveraging deep technical expertise to
+          As a self-taught programmer recognized among the top developers in the world, I’m passionate about leveraging deep technical expertise to
           simplify complex problems. I actively share my journey as a tech
           content creator, mentor, and community builder, helping others in tech
           grow and thrive through education and collaboration.

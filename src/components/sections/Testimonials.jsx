@@ -86,15 +86,11 @@ const Testimonials = () => {
   };
 
   return (
-    <section className='w-full overflow-hidden transform-none'>
+    <section className='w-full overflow-hidden transform-none mt-12'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center'>
         <h2 className='text-4xl font-bold tracking-tight text-gray-900 mb-4'>
           What People Are Saying
         </h2>
-        <p className='text-gray-600 max-w-2xl mx-auto'>
-          Don't just take my word for it - here's what clients and collaborators
-          have to say.
-        </p>
       </div>
 
       <div className='w-full overflow-hidden transform-none'>

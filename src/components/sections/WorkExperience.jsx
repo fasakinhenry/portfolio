@@ -27,7 +27,7 @@ const WorkExperience = () => {
 
   return (
     <section
-      className='w-full flex justify-center py-[58px] px-[1.5rem]'
+      className='w-full flex justify-center py-10 px-[1.5rem]'
       ref={sectionRef}
     >
       <div className='w-full max-w-[53rem] flex flex-col gap-[25px]'>
