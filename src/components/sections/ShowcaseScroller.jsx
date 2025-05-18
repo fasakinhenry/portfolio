@@ -12,10 +12,10 @@ const ShowcaseScroller = () => {
   const duplicatedProjects = [...projects, ...projects];
 
   return (
-    <div className='w-full overflow-hidden transform-none py-16'>
+    <div className='w-full overflow-hidden transform-none'>
       <Marquee
         className='gap-6 py-[1rem]'
-        speed={30}
+        speed={80}
         gradient={false}
         play={true}
         direction='left'
