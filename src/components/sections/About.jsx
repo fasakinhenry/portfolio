@@ -28,7 +28,7 @@ const About = () => {
            <div className='absolute top-0 left-[20%] bg-white px-2 pt-2 -rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:-translate-x-4 group-hover:scale-105'>
              <div className='w-[200px] h-[200px]'>
                <Image
-                 src='/about1.png'
+                 src='/profiles/profile4.jpg'
                  alt='About image 1'
                  width={200}
                  height={200}
@@ -36,14 +36,14 @@ const About = () => {
                />
              </div>
              <span className='text-xs flex justify-center py-1 pb-3 italic text-black text-center'>
-               @techwithhenty
+               @henqsoft
              </span>
            </div>
             
            <div className='absolute top-10 right-[20%] bg-white px-2 pt-2 rotate-12 shadow-lg rounded-lg overflow-hidden transition-all duration-500 group-hover:translate-x-4 group-hover:scale-105'>
              <div className='w-[200px] h-[200px]'>
                <Image
-                 src='/about2.png'
+                 src='/profiles/profile2.jpg'
                  alt='About image 2'
                  width={200}
                  height={200}
@@ -51,7 +51,7 @@ const About = () => {
                />
              </div>
              <span className='text-xs flex justify-center py-1 pb-3 italic text-black text-center'>
-               @techwithhenty
+               @henqsoft
              </span>
            </div>
          </div>
