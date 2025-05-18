@@ -42,13 +42,13 @@ const h2Animation = {
 
 const Hero = () => {
   const router = useRouter();
-
+  
   const handleHireClick = () => {
     // Navigate to contact section
     const contactSection = document.getElementById('contact-form');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
-
+      
       // Prefill the message field
       setTimeout(() => {
         const messageField = document.querySelector('textarea[name="message"]');
@@ -76,7 +76,7 @@ const Hero = () => {
 
       <div className='text-start'>
         <motion.h1
-          className='text-[16px] md:text-[42px] font-bold tracking-[-.05em] leading-[110%] text-black mb-2'
+          className='text-[26px] md:text-[42px] font-bold tracking-[-.03em] leading-[110%] text-black mb-2'
           variants={container}
           initial='hidden'
           animate='visible'
@@ -102,7 +102,7 @@ const Hero = () => {
           <span className='inline-block mr-[0.2em]'>Engineer</span>
         </motion.h2>
 
-        <p className='text-[16px] font-normal leading-[1.6em] text-[#5a5a5a] mt-[25px]'>
+        <p className='text-[16px] font-normal tracking-[.02em] leading-[1.6em] text-[#5a5a5a] mt-[25px]'>
           Solving real-world problems with clean code and thoughtful design.
           <br />
           <span className='mt-2 block'>
@@ -113,7 +113,7 @@ const Hero = () => {
       </div>
 
       <div className='flex gap-4'>
-        <button
+        <button 
           className='font-jakarta bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all duration-[300ms] hover:px-[28px]'
           onClick={handleHireClick}
         >
