@@ -48,19 +48,17 @@ const Contact = () => {
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className='text-[32px] font-bold tracking-[-.03em] leading-[110%] text-black mb-4'
           >
-            Get in touch
+            Get in touch!
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{ duration: 0.3, ease: 'easeOut', delay: 0.05 }}
-            className='text-sm font-normal text-[#5a5a5a] mb-8 max-w-[600px]'
+            className='text-[16px] font-normal leading-[1.6em] text-[#5a5a5a] mb-8 max-w-[600px]'
           >
-            I'm always interested in exploring new opportunities, collaborating,
-            or exchanging ideas with like-minded individuals. Feel free to book
-            a call or email me if you'd like to see my portfolio deck or to
-            discuss a potential project.
+            Always open to new opportunities, collaborations, or idea exchanges.
+            Let’s connect to discuss your project.
           </motion.p>
 
           <div className='w-full flex flex-col gap-4'>
