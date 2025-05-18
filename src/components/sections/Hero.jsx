@@ -97,7 +97,10 @@ const Hero = () => {
           Hire Me
         </button>
         <div className='flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00]'>
-          <div className='w-2 h-2 bg-[#178d00] rounded-full' />
+          <div className='relative w-2 h-2'>
+            <span className='absolute inline-flex h-full w-full rounded-full bg-[#178d00] opacity-75 animate-ping'></span>
+            <span className='absolute inline-flex rounded-full h-2 w-2 bg-[#178d00]'></span>
+          </div>
           <span className='hidden md:flex'>Available for new project</span>
           <span className='md:hidden'>Available</span>
         </div>
