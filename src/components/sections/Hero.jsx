@@ -83,10 +83,9 @@ const Hero = () => {
         </motion.h2>
 
         <p className='text-[16px] font-normal tracking-[.01em] leading-[1.4em] text-[#5a5a5a] mt-[25px]'>
-          Building impactful products with precision and creativity.
+          Solving real-world problems with clean code and thoughtful design.
           <br />
-          Full-stack developer crafting seamless user experiences and solid
-          backends.
+          Full-stack developer with an eye for detail and UX clarity.
         </p>
       </div>
 
