@@ -83,9 +83,10 @@ const Hero = () => {
         </motion.h2>
 
         <p className='text-[16px] font-normal tracking-[.01em] leading-[1.4em] text-[#5a5a5a] mt-[25px]'>
-          Turning bold ideas into real-world solutions.
+          Building impactful products with precision and creativity.
           <br />
-          Day-to-day coder, late-night dream builder.
+          Full-stack developer crafting seamless user experiences and solid
+          backends.
         </p>
       </div>
 
