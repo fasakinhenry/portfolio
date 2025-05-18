@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 
 const experiences = [
   {
@@ -22,19 +22,71 @@ const experiences = [
 ];
 
 const WorkExperience = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: '-100px' });
+  const containerRef = useRef(null);
+  const titleRef = useRef(null);
+
+  // Using useInView for the section to track when it enters viewport
+  const isInView = useInView(containerRef, {
+    amount: 0.1, // Start animation when just 10% is visible
+    once: false,
+  });
+
+  // For the title: track if title is in view
+  const isTitleInView = useInView(titleRef, {
+    once: false,
+    amount: 0.6,
+  });
+
+  // Using useScroll for parallax effect
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end start'],
+  });
+
+  // Transform scrollYProgress into title animation values
+  const titleY = useTransform(scrollYProgress, [0, 0.2], [50, 0]);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const experienceVariants = {
+    hidden: {
+      y: 60,
+      opacity: 0,
+      scale: 0.97,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 12,
+      },
+    },
+  };
 
   return (
     <section
-      className='w-full flex justify-center py-[58px] px-[1.5rem]'
-      ref={ref}
+      className='w-full flex justify-center py-[80px] px-[1.5rem] overflow-hidden'
+      ref={containerRef}
     >
-      <div className='w-full max-w-[53rem] flex flex-col gap-[25px]'>
+      <div className='w-full max-w-[53rem] flex flex-col gap-[30px]'>
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          ref={titleRef}
+          style={{
+            y: titleY,
+            opacity: titleOpacity,
+          }}
           className='flex items-center gap-2 mb-8'
         >
           <h2 className='text-[32px] text-center font-bold tracking-[-.03em] leading-[110%] text-black'>
@@ -42,18 +94,17 @@ const WorkExperience = () => {
           </h2>
         </motion.div>
 
-        <div className='flex flex-col w-full gap-6'>
+        <motion.div
+          className='flex flex-col w-full gap-6'
+          variants={containerVariants}
+          initial='hidden'
+          animate={isInView ? 'visible' : 'hidden'}
+        >
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.1,
-                ease: 'easeOut',
-              }}
-              className='w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#0000001a] bg-white px-6 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0 transition-all hover:shadow-md'
+              variants={experienceVariants}
+              className='w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#0000001a] bg-white px-6 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0 transition-all hover:shadow-lg hover:-translate-y-1 hover:border-blue-200'
               style={{ boxShadow: 'inset 0px 3px 0px 0px rgb(255, 255, 255)' }}
             >
               <div className='text-[#8F8F8F] text-[14px] font-medium'>
@@ -84,7 +135,7 @@ const WorkExperience = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
