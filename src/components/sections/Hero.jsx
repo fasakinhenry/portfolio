@@ -85,7 +85,7 @@ const Hero = () => {
         <p className='text-[16px] font-normal tracking-[.01em] leading-[1.4em] text-[#5a5a5a] mt-[25px]'>
           Solving real-world problems with clean code and thoughtful design.
           <br />
-          Full-stack developer with an eye for detail and UX clarity.
+          Full-stack developer focused on performance, reliability, and great UX.
         </p>
       </div>
 
