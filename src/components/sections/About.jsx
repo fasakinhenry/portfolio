@@ -55,7 +55,7 @@ const About = () => {
       className='w-full max-w-3xl p-6 flex flex-col py-6 md:py-8 px-6 md:px-32 items-start gap-6 mx-auto'
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.2 }}
       variants={fadeIn}
     >
       <motion.h2

@@ -34,7 +34,7 @@ const WorkExperience = () => {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
           className='flex items-center gap-2 mb-8'
         >
           <h2 className='text-[32px] text-center font-bold tracking-[-.03em] leading-[110%] text-black'>
@@ -49,7 +49,7 @@ const WorkExperience = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{
-                duration: 0.3,
+                duration: 0.8,
                 delay: index * 0.1,
                 ease: 'easeOut',
               }}
