@@ -49,7 +49,7 @@ const Projects = ({ showAll = false }) => {
               className='w-full rounded-[20px] overflow-hidden border border-[#0000001a] bg-white shadow transition-transform hover:scale-[1.015] cursor-pointer flex flex-col'
               onClick={() => handleModalOpen(project)}
             >
-              <div className='px-5 pt-5 pb-7 rounded-[20px]'>
+              <div className='px-5 pt-5 rounded-[20px]'>
                 <div className='relative rounded-[20px] overflow-hidden'>
                   <Image
                     src={project.image}
@@ -134,7 +134,7 @@ const Projects = ({ showAll = false }) => {
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 fill
-                className='object-cover'
+                className='object-fill w-full h-full'
               />
             </div>
             <div className='p-6'>
