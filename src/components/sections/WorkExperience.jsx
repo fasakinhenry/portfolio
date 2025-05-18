@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const experiences = [
@@ -22,14 +22,23 @@ const experiences = [
 ];
 
 const WorkExperience = () => {
+  // Reference for the section
+  const sectionRef = useRef(null);
+
   return (
-    <section className='w-full flex justify-center py-[58px] px-[1.5rem]'>
+    <section
+      className='w-full flex justify-center py-[58px] px-[1.5rem]'
+      ref={sectionRef}
+    >
       <div className='w-full max-w-[53rem] flex flex-col gap-[25px]'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1], // Custom ease curve for smoother motion
+          }}
           className='flex items-center gap-2 mb-8'
         >
           <h2 className='text-[32px] text-center font-bold tracking-[-.03em] leading-[110%] text-black'>
@@ -41,16 +50,17 @@ const WorkExperience = () => {
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
               transition={{
-                duration: 0.5,
-                delay: index * 0.2,
+                duration: 0.6,
+                delay: index * 0.1,
                 type: 'spring',
-                stiffness: 80,
+                stiffness: 100,
+                damping: 15,
               }}
-              className='w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#0000001a] bg-white px-6 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0 transition-all hover:shadow-md'
+              className='w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#0000001a] bg-white px-6 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0 transition-all hover:shadow-md hover:-translate-y-1 duration-300'
               style={{ boxShadow: 'inset 0px 3px 0px 0px rgb(255, 255, 255)' }}
             >
               <div className='text-[#8F8F8F] text-[14px] font-medium'>
