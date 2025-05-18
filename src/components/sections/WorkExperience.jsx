@@ -1,20 +1,23 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+
 const experiences = [
   {
     date: '2025-Present',
-    role: 'Frontend Developer',
-    company: 'Steadfast Int.',
+    role: 'Lead Engineer',
+    company: 'Jobstraight Inc.',
   },
   {
     date: '2024-Present',
     role: 'Fullstack Developer',
-    company: 'Indulgetix',
+    company: 'Rubies Tech',
   },
   {
     date: '2019-2022',
-    role: 'Backend Developer',
-    company: 'OrganStation',
+    role: 'Software Engineer',
+    company: 'Henqsoft',
   },
 ];
 
@@ -22,17 +25,32 @@ const WorkExperience = () => {
   return (
     <section className='w-full flex justify-center py-[58px] px-[1.5rem]'>
       <div className='w-full max-w-[53rem] flex flex-col gap-[25px]'>
-        <div className='flex items-center gap-2 mb-8'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          className='flex items-center gap-2 mb-8'
+        >
           <h2 className='text-[32px] text-center font-bold tracking-[-.03em] leading-[110%] text-black'>
             Work Experience
           </h2>
-        </div>
+        </motion.div>
 
         <div className='flex flex-col w-full gap-6'>
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={index}
-              className='w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#0000001a] bg-white px-6 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0 transition-all'
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.2,
+                type: 'spring',
+                stiffness: 80,
+              }}
+              className='w-full rounded-[20px] overflow-hidden border-[1.5px] border-[#0000001a] bg-white px-6 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0 transition-all hover:shadow-md'
               style={{ boxShadow: 'inset 0px 3px 0px 0px rgb(255, 255, 255)' }}
             >
               <div className='text-[#8F8F8F] text-[14px] font-medium'>
@@ -61,7 +79,7 @@ const WorkExperience = () => {
                   <span>{exp.company}</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
