@@ -77,22 +77,26 @@ const About = () => {
         variants={container}
       >
         <motion.p variants={fadeIn}>
-          I like to craft solid and scalable products with exceptional user
-          experiences, focusing on innovation and problem-solving across various
-          industries.
+          I enjoy building purposeful and scalable products with thoughtful user
+          experiences, especially tools that create social and economic impact
+          across communities, with a strong focus on innovation, sustainability,
+          and accessibility.
         </motion.p>
 
         <motion.p variants={fadeIn}>
-          I'm Fasakin Henry, a Nigerian software developer, with 7.5+ years of
-          experience in web development, app development, robotics, cloud
-          computing, and game development. I specialize in building robust
-          applications, cloud platforms, and cutting-edge robotics solutions.
+          I'm Fasakin Henry, a Nigerian full-stack developer and tech
+          entrepreneur with over 5 years of experience in web and mobile
+          development, cloud platforms, robotics, and developer tools. I’m known
+          for delivering highly performant, production-ready applications and
+          creating robust systems that power real-world solutions.
         </motion.p>
 
         <motion.p variants={fadeIn}>
-          A self-taught programmer, ranked among the top programmers in Lagos,
-          Nigeria, I am an active tech content creator, speaker, and mentor
-          passionate about empowering others in tech.
+          As a self-taught programmer recognized among the top developers in
+          Lagos, I’m passionate about leveraging deep technical expertise to
+          simplify complex problems. I actively share my journey as a tech
+          content creator, mentor, and community builder, helping others in tech
+          grow and thrive through education and collaboration.
         </motion.p>
 
         <motion.div
