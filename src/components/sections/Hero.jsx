@@ -85,7 +85,7 @@ const Hero = () => {
         <p className='text-[16px] font-normal tracking-[.02em] leading-[1.6em] text-[#5a5a5a] mt-[25px]'>
           Solving real-world problems with clean code and thoughtful design.
           <br />
-          <span className='mt-2 block'>
+          <span className='pt-2 block'>
             Full-stack developer focused on performance, clean architecture,
             reliability with great eye for detail and UX clarity.
           </span>
