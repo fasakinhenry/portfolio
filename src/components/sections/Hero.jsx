@@ -82,12 +82,12 @@ const Hero = () => {
           <span className='inline-block mr-[0.2em]'>Engineer</span>
         </motion.h2>
 
-        <p className='text-[16px] font-normal tracking-[.01em] leading-[1.4em] text-[#5a5a5a] mt-[25px]'>
+        <p className='text-[16px] font-normal tracking-[.02em] leading-[1.6em] text-[#5a5a5a] mt-[25px]'>
           Solving real-world problems with clean code and thoughtful design.
           <br />
-          <br />
+          <span className='mt-2'>
           Full-stack developer focused on performance, reliability with great
-          eye for detail and UX clarity.
+          eye for detail and UX clarity.</span>
         </p>
       </div>
 
