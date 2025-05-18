@@ -86,7 +86,7 @@ const Hero = () => {
           Solving real-world problems with clean code and thoughtful design.
           <br />
           <span className='mt-2'>
-          Full-stack developer focused on performance, reliability with great
+          Full-stack developer focused on performance, clean architecture, reliability with great
           eye for detail and UX clarity.</span>
         </p>
       </div>
