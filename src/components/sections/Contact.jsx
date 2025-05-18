@@ -1,6 +1,34 @@
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
 const Contact = () => {
+  const messageRef = useRef(null);
+
+  useEffect(() => {
+    // Check if there's a URL parameter for prefilling the message
+    const handleHashChange = () => {
+      if (window.location.hash === '#hire') {
+        if (messageRef.current) {
+          messageRef.current.value = 'Hello Henry, Are you up for this role:';
+          messageRef.current.focus();
+        }
+      }
+    };
+
+    // Initial check on component mount
+    handleHashChange();
+
+    // Set up event listener for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   return (
     <section className='w-full flex justify-center items-center py-10'>
       <div className='w-full max-w-[53rem] p-6 flex flex-col py-[20px] px-[1.5rem] md:px-[8rem] items-center gap-[25px]'>
@@ -36,6 +64,7 @@ const Contact = () => {
               />
             </div>
             <textarea
+              ref={messageRef}
               name='message'
               placeholder='Write your Message'
               required
@@ -43,7 +72,7 @@ const Contact = () => {
             ></textarea>
             <button
               type='submit'
-              className='bg-black relative text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70 mt-2'
+              className='font-jakarta bg-black relative text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 duration-[300ms] transition-all w-full disabled:opacity-70 mt-2'
             >
               <Image
                 alt='Doodle'

@@ -3,6 +3,7 @@
 import Navbar from '@/components/Navbar';
 import VerticalBoundaries from '@/components/VerticalBoundaries';
 import Projects from '@/components/sections/Projects';
+import Footer from '@/components/Footer';
 
 export default function ProjectsPage() {
   return (
@@ -15,6 +16,7 @@ export default function ProjectsPage() {
         <Projects showAll={true} />
       </div>
       </div>
+      <Footer />
     </main>
   );
 }

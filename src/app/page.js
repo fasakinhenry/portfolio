@@ -12,7 +12,7 @@ import WorkExperience from '@/components/sections/WorkExperience';
 import Skills from '@/components/sections/Skills';
 import Testimonials from '@/components/sections/Testimonials';
 import Contact from '@/components/sections/Contact';
-import Footer from '@/components/sections/Footer';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   useEffect(() => {

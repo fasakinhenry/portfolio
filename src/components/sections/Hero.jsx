@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const text = ['Hey,', "I'm", 'Fasakin', 'Henry.'];
 
@@ -40,6 +41,25 @@ const h2Animation = {
 };
 
 const Hero = () => {
+  const router = useRouter();
+  
+  const handleHireClick = () => {
+    // Navigate to contact section
+    const contactSection = document.getElementById('contact-form');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      
+      // Prefill the message field
+      setTimeout(() => {
+        const messageField = document.querySelector('textarea[name="message"]');
+        if (messageField) {
+          messageField.value = 'Hello Henry, Are you up for this role:';
+          messageField.focus();
+        }
+      }, 800); // Small delay to ensure the scroll completes first
+    }
+  };
+
   return (
     <section className='w-full max-w-[53rem] mx-auto p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[10rem] items-start gap-[25px]'>
       <div>
@@ -93,7 +113,10 @@ const Hero = () => {
       </div>
 
       <div className='flex gap-4'>
-        <button className='font-jakarta bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all duration-[300ms] hover:px-[28px]'>
+        <button 
+          className='font-jakarta bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all duration-[300ms] hover:px-[28px]'
+          onClick={handleHireClick}
+        >
           Hire Me
         </button>
         <div className='flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00]'>
