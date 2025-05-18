@@ -49,16 +49,21 @@ const Projects = ({ showAll = false }) => {
               className='w-full rounded-[20px] overflow-hidden border border-[#0000001a] bg-white shadow transition-transform hover:scale-[1.015] cursor-pointer flex flex-col'
               onClick={() => handleModalOpen(project)}
             >
-              <div className='px-5 pt-5'>
-                <div className='w-full h-48 relative rounded-[20px] overflow-hidden'>
+              <div className='px-5 pt-5 pb-7 rounded-[20px]'>
+                <div className='relative rounded-[20px] overflow-hidden'>
                   <Image
                     src={project.image}
                     alt={project.title}
-                    fill
-                    className='object-cover'
+                    width={800}
+                    height={600}
+                    className='w-full h-auto object-contain'
+                    loading='lazy'
+                    decoding='async'
+                    style={{ color: 'transparent' }}
                   />
                 </div>
               </div>
+
               <div className='px-7 py-7 flex flex-col flex-grow'>
                 <h3 className='text-xl font-semibold mb-2'>{project.title}</h3>
                 <p className='text-[#5a5a5a] text-sm line-clamp-2 mb-3'>
