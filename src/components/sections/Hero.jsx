@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const text = ['Hey,', "I'm", 'Fasakin', 'Henry.'];
 
@@ -33,7 +33,7 @@ const h2Animation = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.8, // starts after h1
+      delay: 0.8,
       duration: 0.6,
       ease: 'easeOut',
     },
@@ -41,27 +41,23 @@ const h2Animation = {
 };
 
 const Hero = () => {
-  const router = useRouter();
-  
   const handleHireClick = () => {
-    // Navigate to contact section
     const contactSection = document.getElementById('contact-form');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
-      
-      // Prefill the message field
+
       setTimeout(() => {
         const messageField = document.querySelector('textarea[name="message"]');
         if (messageField) {
           messageField.value = 'Hello Henry, Are you up for this role:';
           messageField.focus();
         }
-      }, 800); // Small delay to ensure the scroll completes first
+      }, 800);
     }
   };
 
   return (
-    <section className='w-full max-w-[53rem] mx-auto p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] px-[1.5rem] md:px-[10rem] items-start gap-[25px]'>
+    <section className='w-full max-w-[53rem] mx-auto p-6 flex flex-col pt-[150px] md:pt-[188px] pb-[2rem] md:pb-[3rem] md:px-[10rem] items-start gap-[25px]'>
       <div>
         <img
           alt='Profile picture'
@@ -69,7 +65,6 @@ const Hero = () => {
           height='100'
           decoding='async'
           className='rounded-full object-cover'
-          style={{ color: 'transparent', width: '100px', height: '100px' }}
           src='/profile.jpeg'
         />
       </div>
@@ -113,20 +108,23 @@ const Hero = () => {
       </div>
 
       <div className='flex gap-4'>
-        <button 
+        <button
           className='font-jakarta bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all duration-[300ms] hover:px-[28px]'
           onClick={handleHireClick}
         >
           Hire Me
         </button>
-        <div className='flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00]'>
-          <div className='relative w-2 h-2'>
-            <span className='absolute inline-flex h-full w-full rounded-full bg-[#178d00] opacity-75 animate-ping'></span>
-            <span className='absolute inline-flex rounded-full h-2 w-2 bg-[#178d00]'></span>
+
+        <Link href='/resume'>
+          <div className='flex items-center rounded-[100px] text-[16px] gap-2 px-[24px] py-[14px] bg-[#e1f9dc] text-[#178d00] cursor-pointer'>
+            <div className='relative w-2 h-2'>
+              <span className='absolute inline-flex h-full w-full rounded-full bg-[#178d00] opacity-75 animate-ping'></span>
+              <span className='absolute inline-flex rounded-full h-2 w-2 bg-[#178d00]'></span>
+            </div>
+            <span className='hidden md:flex'>Available for new project</span>
+            <span className='md:hidden'>Available</span>
           </div>
-          <span className='hidden md:flex'>Available for new project</span>
-          <span className='md:hidden'>Available</span>
-        </div>
+        </Link>
       </div>
     </section>
   );
