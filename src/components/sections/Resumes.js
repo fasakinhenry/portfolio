@@ -83,6 +83,7 @@ export default function Resumes() {
   const [viewLayout, setViewLayout] = useState('list'); // 'list' or 'grid'
   const [selectedResume, setSelectedResume] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const handleViewResume = (resume) => {
     setSelectedResume(resume);
@@ -101,10 +102,22 @@ export default function Resumes() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    setActiveDropdown(null); // Close dropdown after download
+  };
+
+  const toggleDropdown = (resumeId) => {
+    setActiveDropdown(activeDropdown === resumeId ? null : resumeId);
+  };
+
+  // Close dropdown when clicking outside
+  const handleClickOutside = (e) => {
+    if (!e.target.closest('.dropdown-container')) {
+      setActiveDropdown(null);
+    }
   };
 
   return (
-    <section className='w-full flex flex-col py-8'>
+    <section className='w-full flex flex-col py-8' onClick={handleClickOutside}>
       {/* Layout Toggle */}
       <div className='flex justify-between items-center mb-6'>
         <div className='flex items-center gap-2'>
@@ -241,12 +254,11 @@ export default function Resumes() {
               </div>
 
               {/* Mobile: Dropdown for downloads */}
-              <div className='relative sm:hidden'>
+              <div className='relative sm:hidden dropdown-container'>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    const dropdown = e.currentTarget.nextElementSibling;
-                    dropdown.classList.toggle('hidden');
+                    toggleDropdown(resume.id);
                   }}
                   className='flex items-center gap-1 px-3 py-2 text-sm text-[#5a5a5a] 
                            hover:text-black hover:bg-gray-50 rounded-md transition-colors'
@@ -256,14 +268,17 @@ export default function Resumes() {
                 </button>
 
                 <div
-                  className='hidden absolute right-0 top-full mt-1 bg-white border border-gray-200 
-                              rounded-md shadow-lg z-10 min-w-[120px]'
+                  className={`absolute right-0 top-full mt-1 bg-white border border-gray-200 
+                              rounded-md shadow-lg z-10 min-w-[120px] ${
+                                activeDropdown === resume.id
+                                  ? 'block'
+                                  : 'hidden'
+                              }`}
                 >
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       handleDownload(resume.pdfUrl, `${resume.title}.pdf`);
-                      e.currentTarget.parentElement.classList.add('hidden');
                     }}
                     className='w-full text-left px-3 py-2 text-sm text-[#5a5a5a] hover:bg-gray-50 
                              hover:text-black transition-colors flex items-center gap-2'
@@ -275,7 +290,6 @@ export default function Resumes() {
                     onClick={(e) => {
                       e.stopPropagation();
                       handleDownload(resume.docxUrl, `${resume.title}.docx`);
-                      e.currentTarget.parentElement.classList.add('hidden');
                     }}
                     className='w-full text-left px-3 py-2 text-sm text-[#5a5a5a] hover:bg-gray-50 
                              hover:text-black transition-colors flex items-center gap-2'
