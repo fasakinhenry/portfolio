@@ -23,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: 'Fasakin Henry',
     description:
-      'Cracked Software Engineer | Full Stack Developer | Tech Enthusiast',
+      'Cracked Software Engineer | Full Stack Developer | Product designer',
     url: 'https://fasakinhenry.com',
     siteName: 'Fasakin Henry',
     images: [
