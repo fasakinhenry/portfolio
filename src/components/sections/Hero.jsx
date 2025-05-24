@@ -65,6 +65,7 @@ const Hero = () => {
           height='100'
           decoding='async'
           className='rounded-full object-cover'
+          style={{ width: '100px', height: '100px' }}
           src='/profile.jpeg'
         />
       </div>
@@ -109,7 +110,7 @@ const Hero = () => {
 
       <div className='flex gap-4'>
         <button
-          className='font-jakarta bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all duration-[300ms] hover:px-[28px]'
+          className='font-jakarta bg-black text-white py-[14px] px-[24px] rounded-[14px] text-[16px] hover:opacity-90 transition-all duration-[300ms] hover:px-[28px] cursor-pointer'
           onClick={handleHireClick}
         >
           Hire Me
