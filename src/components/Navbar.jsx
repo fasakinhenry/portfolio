@@ -35,7 +35,7 @@ const navLinks = [
   },
   {
     label: 'Resume',
-    href: '/resume.pdf',
+    href: '/resume',
     external: true,
     download: true,
     icon: <FileText size={20} />,
