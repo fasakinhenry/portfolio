@@ -213,29 +213,78 @@ export default function Resumes() {
                 <span className='hidden sm:inline'>View</span>
               </button>
 
-              <button
-                onClick={() =>
-                  handleDownload(resume.pdfUrl, `${resume.title}.pdf`)
-                }
-                className='flex items-center gap-1 px-3 py-2 text-sm text-[#5a5a5a] 
-                         hover:text-black hover:bg-gray-50 rounded-md transition-colors'
-                title='Download PDF'
-              >
-                <Download className='w-4 h-4' />
-                <span className='hidden sm:inline'>PDF</span>
-              </button>
+              {/* Desktop: Separate PDF and DOCX buttons */}
+              <div className='hidden sm:flex gap-2'>
+                <button
+                  onClick={() =>
+                    handleDownload(resume.pdfUrl, `${resume.title}.pdf`)
+                  }
+                  className='flex items-center gap-1 px-3 py-2 text-sm text-[#5a5a5a] 
+                           hover:text-black hover:bg-gray-50 rounded-md transition-colors'
+                  title='Download PDF'
+                >
+                  <Download className='w-4 h-4' />
+                  PDF
+                </button>
 
-              <button
-                onClick={() =>
-                  handleDownload(resume.docxUrl, `${resume.title}.docx`)
-                }
-                className='flex items-center gap-1 px-3 py-2 text-sm text-[#5a5a5a] 
-                         hover:text-black hover:bg-gray-50 rounded-md transition-colors'
-                title='Download DOCX'
-              >
-                <Download className='w-4 h-4' />
-                <span className='hidden sm:inline'>DOCX</span>
-              </button>
+                <button
+                  onClick={() =>
+                    handleDownload(resume.docxUrl, `${resume.title}.docx`)
+                  }
+                  className='flex items-center gap-1 px-3 py-2 text-sm text-[#5a5a5a] 
+                           hover:text-black hover:bg-gray-50 rounded-md transition-colors'
+                  title='Download DOCX'
+                >
+                  <Download className='w-4 h-4' />
+                  DOCX
+                </button>
+              </div>
+
+              {/* Mobile: Dropdown for downloads */}
+              <div className='relative sm:hidden'>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    const dropdown = e.currentTarget.nextElementSibling;
+                    dropdown.classList.toggle('hidden');
+                  }}
+                  className='flex items-center gap-1 px-3 py-2 text-sm text-[#5a5a5a] 
+                           hover:text-black hover:bg-gray-50 rounded-md transition-colors'
+                  title='Download Options'
+                >
+                  <Download className='w-4 h-4' />
+                </button>
+
+                <div
+                  className='hidden absolute right-0 top-full mt-1 bg-white border border-gray-200 
+                              rounded-md shadow-lg z-10 min-w-[120px]'
+                >
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDownload(resume.pdfUrl, `${resume.title}.pdf`);
+                      e.currentTarget.parentElement.classList.add('hidden');
+                    }}
+                    className='w-full text-left px-3 py-2 text-sm text-[#5a5a5a] hover:bg-gray-50 
+                             hover:text-black transition-colors flex items-center gap-2'
+                  >
+                    <FileText className='w-4 h-4' />
+                    PDF
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDownload(resume.docxUrl, `${resume.title}.docx`);
+                      e.currentTarget.parentElement.classList.add('hidden');
+                    }}
+                    className='w-full text-left px-3 py-2 text-sm text-[#5a5a5a] hover:bg-gray-50 
+                             hover:text-black transition-colors flex items-center gap-2'
+                  >
+                    <FileText className='w-4 h-4' />
+                    DOCX
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         ))}
