@@ -24,7 +24,7 @@ export const metadata = {
     title: 'Fasakin Henry',
     description:
       'Cracked Software Engineer | Full Stack Developer | Product designer',
-    url: 'https://fasakinhenry.com',
+    url: 'https://fasakinhenry.com/og-image.png',
     siteName: 'Fasakin Henry',
     images: [
       {
