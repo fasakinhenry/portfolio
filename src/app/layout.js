@@ -20,23 +20,6 @@ export const metadata = {
   title: 'Fasakin Henry',
   description:
     'Cracked Software Engineer | Full Stack Developer | Tech Enthusiast',
-  openGraph: {
-    title: 'Fasakin Henry',
-    description:
-      'Cracked Software Engineer | Full Stack Developer | Product designer',
-    url: 'https://fasakinhenry.com/og-image.png',
-    siteName: 'Fasakin Henry',
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Fasakin Henry - Software Engineer',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
 };
 
 export default function RootLayout({ children }) {
